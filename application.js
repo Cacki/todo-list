@@ -42,7 +42,7 @@ todos.addEventListener('click', event => {
       target.remove();
     }
 }});
-//functions
+
 const removeError = () => { addInput.classList.remove('error') };
 
 const addTodo = () => {
@@ -82,11 +82,4 @@ const createTodo = todoValue => {
     itemContainer.classList.add('show');
     listItem.classList.add('show');
   }, 25);
-  // addHeight(listItem.clientHeight);
-}
-
-const addHeight = addHeight => {
-  const newHeight = todos.clientHeight + addHeight;
-  todos.style.clientHeight = newHeight;
-  todos.style.transition = "clientHeight 1s ease";
 }
