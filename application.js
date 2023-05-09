@@ -81,5 +81,12 @@ const createTodo = todoValue => {
   setTimeout( () => {
     itemContainer.classList.add('show');
     listItem.classList.add('show');
-  }, 250);
+  }, 25);
+  // addHeight(listItem.clientHeight);
+}
+
+const addHeight = addHeight => {
+  const newHeight = todos.clientHeight + addHeight;
+  todos.style.clientHeight = newHeight;
+  todos.style.transition = "clientHeight 1s ease";
 }

@@ -53,7 +53,7 @@ button {
   color: white;
   padding: 5px 10px;
   margin-left: 10px;
-  height: 40px;
+  height: 30px;
   box-sizing: border-box;
   transition: background-color 0.5s ease;
 }
@@ -67,6 +67,17 @@ button:hover {
   padding: 5px 5px;
   margin-bottom: 10px;
 }
+
+@media (width < 1000px ) {
+  .list {
+    width: 80%;
+  }
+}
+@media (width < 600px ) {
+  .list {
+    width: 95%;
+  }
+}
 /* mediaquery more width when width of screen lover */
 .list-item {
   width: 100%;
@@ -79,16 +90,14 @@ button:hover {
   gap: 10px 10px;
   border-bottom: 1px solid var(--dartViolet);
   opacity: 0;
-  transform: translateY(400px);
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out 0.1s;
+  text-decoration: line-through;
 }
-
 .list-item .item-container.show{
   opacity: 1;
-  transform: translateY(0);
   overflow: hidden;
+  text-decoration: none;
 }
-
 .text-container, .img-container {
   overflow: hidden;
 }
