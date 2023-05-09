@@ -1,0 +1,119 @@
+:root {
+  --darkGray: #474747;
+  --dartViolet: #3B3B94;
+  --background: #272727;
+  font-family: Roboto, Arial;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--background);
+  color: #fff;
+  min-height: 100vh;
+}
+header {
+  border-bottom: 1px solid var(--dartViolet);
+  text-align: center;
+  margin-bottom:40px;
+  background-color: var(--dartViolet);
+}
+h1 {
+  padding: 20px 0;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+form {
+  height: 30px; 
+}
+.add {
+  margin-top: 20px;
+}
+input {
+  background-color: var(--darkGray);
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 5px 5px;
+  height: 100%;
+}
+input:focus {
+  outline: transparent;
+}
+button {
+  background-color: transparent;
+  border: 1px solid var(--dartViolet);
+  border-radius: 2px;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 10px;
+  height: 40px;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease;
+}
+button:hover {
+  cursor: pointer;
+  background-color: var(--dartViolet);
+}
+.list {
+  width: 60%;
+  list-style: none;
+  padding: 5px 5px;
+  margin-bottom: 10px;
+}
+/* mediaquery more width when width of screen lover */
+.list-item {
+  width: 100%;
+  padding: 5px 5px;
+}
+.list-item .item-container {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 1fr 48px;
+  gap: 10px 10px;
+  border-bottom: 1px solid var(--dartViolet);
+  opacity: 0;
+  transform: translateY(400px);
+  transition: all 0.3s ease-out;
+}
+
+.list-item .item-container.show{
+  opacity: 1;
+  transform: translateY(0);
+  overflow: hidden;
+}
+
+.text-container, .img-container {
+  overflow: hidden;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  height: 24px;
+}
+img:hover {
+  cursor: pointer;
+}
+.error {
+  animation: shake 0.2s ease-in-out 0s 2;
+  box-shadow: inset 0 0 0.3em red;
+}
+@keyframes shake {
+  0% { margin-left: 0rem; }
+  25% { margin-left: 0.5rem; }
+  75% { margin-left: -0.5rem; }
+  100% { margin-left: 0rem; }
+}
+.vanish {
+  display: none;
+}
+
